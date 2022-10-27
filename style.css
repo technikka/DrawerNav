@@ -27,16 +27,25 @@ html {
 }
 
 #nav-drawer {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 24px;
   background: rgb(107, 63, 202);
   gap: 20px;
   padding: 20px;
-  /* border-bottom-right-radius: 90%; */
-  display: none;
+  padding-bottom: 60px;
+  top: 0;
+  left: -200px;
+  position: fixed;
+  opacity: 0%;
+  transition: all 0.3s;
+
 }
 
 #nav-drawer.show {
-  display: flex;
-  flex-flow: column wrap;
+  opacity: 100%;
+  left: 0;
+  width: 90%;
 }
 
 #nav-drawer a {
@@ -44,22 +53,17 @@ html {
   color: white;
 }
 
-#close {
-  margin-top: 5vh;
-  justify-self: center;
-  background: rgb(107, 63, 202);
+.close {
+  display: flex;
+  align-items: center;
+  background: #362065;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: none;
+  margin-left: auto;
 }
 
-#close.show {
-  display: flex;
-  align-items: center;
-}
-
-#close img {
+.close img {
   width: 80%;
   margin: auto;
 }
